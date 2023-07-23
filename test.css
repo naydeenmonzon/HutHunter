@@ -1,0 +1,173 @@
+html {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+}
+
+.surface {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(35deg, #673ab7, #9c27b0);
+    color: #fff;
+}
+
+.ball-and-shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 5em;
+    left: 0;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+}
+
+.ball {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(30, 30, 30);
+    border-radius: 100%;
+    box-shadow: inset -10px 10px 50px #4389c3a1, inset 5px -5px 50px rgba(0, 0, 0, 1), inset 50px -50px 200px rgb(0, 0, 0), inset 0px -20px 20px #00153c;
+    overflow: hidden;
+}
+
+.ball .upper-shine {
+    position: absolute;
+    background: radial-gradient(ellipse at center, #2b4fb100 0%, #798bf136 7%, #0000001a 30%, #00000000 100%);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    left: 60%;
+    top: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.ball .inside {
+    position: absolute;
+    background: linear-gradient(45deg, #14121a 0%, #241925 100%);
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    border: solid 4px #141414cc;
+    box-shadow: 10px -10px 10px #14141499, 10px -10px 1px #14141480, -10px -10px 1px #181f2f57, 10px 10px 1px #32323280, -10px 10px 1px #66697324, 8px -10px 10px #17202d, -8px 10px 10px #455b7547, inset -10px 10px 40px #0035c80d, inset 10px -10px 40px #003fc81a;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.ball .answer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform: scale(.9) rotate(15deg);
+    
+    transition: transform 1.3s ease, opacity 1.3s ease;
+}
+
+
+
+
+.ball .triangle {
+    position: absolute;
+    border: 69px solid transparent;
+    border-top: 121px solid rgba(255, 255, 255, .1);
+    top: 69%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    left: 0;
+}
+
+.ball .inside-shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 100%;
+    box-shadow: inset 0 0 80px #000000cc, inset 0 0 40px #000000;
+    pointer-events: none;
+}
+
+.ball .content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ball .balltext {
+    text-align: center;
+    width: 50%;
+    margin-top: .4em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    text-indent: .01em;
+    color: rgba(240, 220, 240, .86);
+    text-shadow: 1px 1px 2px #00a0c8cc;
+}
+
+
+.shadow {
+    position: absolute;
+    bottom: -2.5%;
+    right: 0;
+    top: auto;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60%;
+    width: 75%;
+    max-width: 90vw;
+    background: #0a0a0a;
+    border-radius: 100%;
+    filter: blur(40px);
+    -webkit-filter: blur(50px);
+    transform: scaleY(.1) translate(0);
+    transform-origin: bottom;
+}
+.ball .default-text {
+    opacity: 1;
+}
+
+.ball .ball-answer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.ad {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, .3);
+    padding: 1.5em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    text-indent: .01em;
+    color: rgba(240, 220, 240, .86);
+    text-align: center;
+}

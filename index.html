@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+          --background: #fff;
+          --rainbow-1: #e91e63;
+          --rainbow-2: #9c27b0;
+          --rainbow-3: #3f51b5;
+          --rainbow-4: #2196f3;
+          --rainbow-5: #00bcd4;
+          --rainbow-6: #4caf50;
+          --rainbow-7: #cddc39;
+          --rainbow-8: #ffc107;
+        }
+      
+        * {
+          margin: 0;
+          box-sizing: inherit
+        }
+      
+        html {
+          background: var(--background);
+          font-family: Avenir, sans-serif;
+          box-sizing: border-box;
+          font-size: 20px;
+        }
+      
+        head {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 5em;
+          width: 5em;
+          border-radius: 50%;
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          animation: zoom-head 6s ease infinite;
+        }
+      
+        @keyframes zoom-head {
+          from, to {
+            transform: scale(.3)
+          }
+      
+          50% {
+            transform: scale(.4);
+          }
+        }
+      
+        head::before, head::after {
+          content: "";
+          display: block;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 50%;
+        }
+      
+        head::before {
+          box-shadow: 0 10em 0 -1em var(--background), -10em 0 0 -1em var(--background), 0 -10em 0 -1em var(--background), 10em 0 0 -1em var(--background), 0 10em var(--rainbow-1), -10em 0 var(--rainbow-3), 0 -10em var(--rainbow-5), 10em 0 var(--rainbow-7);
+          animation: rotate-head-before 3.5s linear infinite;
+        }
+      
+        @keyframes rotate-head-before {
+          from {
+            transform: rotate(0deg)
+          }
+      
+          to {
+            transform: rotate(360deg)
+          }
+        }
+      
+        head::after {
+          box-shadow: 0 10em 0 -1em var(--background), -10em 0 0 -1em var(--background), 0 -10em 0 -1em var(--background), 10em 0 0 -1em var(--background), 0 10em var(--rainbow-2), -10em 0 var(--rainbow-4), 0 -10em var(--rainbow-6), 10em 0 var(--rainbow-8);
+          animation: rotate-head-after 3.5s linear infinite;
+        }
+      
+        @keyframes rotate-head-after {
+          from {
+            transform: rotate(45deg)
+          }
+      
+          to {
+            transform: rotate(405deg)
+          }
+        }
+      
+        body {
+        }
+      
+        body::after {
+          content: "";
+          display: block;
+          height: 8em;
+          width: 100vw;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      </style>
+</head>
+<body>
+    
+</body>
+</html>
